@@ -4,6 +4,7 @@ import { SaveSearch } from './SaveSearch'
 function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
   return (
     <>
+      {/* ------------------------------ Bedriftsnavn */}
       <div>
         Bedriftsnavn:{' '}
         <input
@@ -13,9 +14,11 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           onChange={(e) => updateFilters({ bedriftName: e.target.value })}
         />
       </div>
+      {/* -------------------------------- Kommuner */}
       <div>
         <GetKommuner filters={filters} updateFilter={updateFilters} />
       </div>
+      {/* --------------------------- Organisasjonsnummer */}
       <div>
         Organisasjonsnummer:{' '}
         <input
@@ -27,6 +30,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           }
         />
       </div>
+      {/* ---------------------------- Registreringsdato */}
       <div>
         Registreringsdato fra:{' '}
         <input
@@ -47,6 +51,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           }
         />
       </div>
+      {/* --------------------------------- Konkurs */}
       <div>
         Konkurs:{' '}
         <input
@@ -74,6 +79,84 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
         />{' '}
         Begge
       </div>
+      {/* ------------ UnderTvangsavviklingEllerTvangsopplosning */}
+      <div>
+        Under Tvangsavvikling eller Tvangsopplosning:{' '}
+        <input
+          type='radio'
+          name='tvangsavvikling'
+          value='tvangsavviklingYes'
+          onChange={() =>
+            updateFilters({ tvangsavvikling: 'tvangsavviklingYes' })
+          }
+          checked={
+            filters.tvangsavvikling === 'tvangsavviklingYes' ? true : false
+          }
+        />{' '}
+        Ja
+        <input
+          type='radio'
+          name='tvangsavvikling'
+          value='tvangsavviklingNo'
+          onChange={() =>
+            updateFilters({ tvangsavvikling: 'tvangsavviklingNo' })
+          }
+          checked={
+            filters.tvangsavvikling === 'tvangsavviklingNo' ? true : false
+          }
+        />{' '}
+        Nei
+        <input
+          type='radio'
+          name='tvangsavvikling'
+          value='tvangsavviklingAll'
+          onChange={() =>
+            updateFilters({ tvangsavvikling: 'tvangsavviklingAll' })
+          }
+          checked={
+            filters.tvangsavvikling === 'tvangsavviklingAll' ? true : false
+          }
+        />{' '}
+        Begge
+      </div>
+      {/* ----------------------------- UnderAvvikling */}
+      <div>
+        UnderAvvikling:{' '}
+        <input
+          type='radio'
+          name='underAvvikling'
+          value='underAvviklingYes'
+          onChange={() =>
+            updateFilters({ underAvvikling: 'underAvviklingYes' })
+          }
+          checked={
+            filters.underAvvikling === 'underAvviklingYes' ? true : false
+          }
+        />{' '}
+        Ja
+        <input
+          type='radio'
+          name='underAvvikling'
+          value='underAvviklingNo'
+          onChange={() => updateFilters({ underAvvikling: 'underAvviklingNo' })}
+          checked={filters.underAvvikling === 'underAvviklingNo' ? true : false}
+        />{' '}
+        Nei
+        <input
+          type='radio'
+          name='underAvvikling'
+          value='underAvviklingAll'
+          onChange={() =>
+            updateFilters({ underAvvikling: 'underAvviklingAll' })
+          }
+          checked={
+            filters.underAvvikling === 'underAvviklingAll' ? true : false
+          }
+        />{' '}
+        Begge
+      </div>
+
+      {/* -------------------------------------------------------------------------- */}
       <div>
         <button
           onClick={() => {

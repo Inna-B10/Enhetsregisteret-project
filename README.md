@@ -17,23 +17,25 @@ velge/skrive:
 navn
 organisasjonsnummer
 konkurs
-overordnetEnhet
+fraRegistreringsdatoEnhetsregisteret tilRegistreringsdatoEnhetsregisteret
+underTvangsavviklingEllerTvangsopplosning
+underAvvikling
+
+fraStiftelsesdato tilStiftelsesdato
 fraAntallAnsatte tilAntallAnsatte
 registrertIMvaregisteret
 registrertIForetaksregisteret
 registrertIStiftelsesregisteret
 registrertIFrivillighetsregisteret
 frivilligRegistrertIMvaregisteret
-underTvangsavviklingEllerTvangsopplosning
-underAvvikling
-fraRegistreringsdatoEnhetsregisteret tilRegistreringsdatoEnhetsregisteret
-fraStiftelsesdato tilStiftelsesdato
+naeringskode
+sisteInnsendteAarsregnskap
+
+overordnetEnhet
 organisasjonsform
 institusjonellSektorkode
 forretningsadresse.landkode
 postadresse.landkode
-naeringskode
-sisteInnsendteAarsregnskap
 
 https://data.brreg.no/enhetsregisteret/api/enheter?navn=Sesam&fraRegistreringsdatoEnhetsregisteret=2017-10-20&tilRegistreringsdatoEnhetsregisteret=2017-10-20&konkurs=false
 

@@ -18,6 +18,8 @@ export function HomePage() {
     fraRegistreringsdato: '',
     tilRegistreringsdato: '',
     konkurs: '',
+    tvangsavvikling: '',
+    underAvvikling: '',
   })
   const navn = filters.bedriftName && `&navn=${filters.bedriftName}`
   const kommune = filters.kommuneCode && `&kommunenummer=${filters.kommuneCode}`
@@ -36,6 +38,18 @@ export function HomePage() {
       : filters.konkurs === 'konkursYes'
       ? '&konkurs=true'
       : '&konkurs=false'
+  const tvangsavvikling =
+    !filters.tvangsavvikling || filters.tvangsavvikling === 'tvangsavviklingAll'
+      ? ''
+      : filters.tvangsavvikling === 'tvangsavviklingYes'
+      ? '&underTvangsavviklingEllerTvangsopplosning=true'
+      : '&underTvangsavviklingEllerTvangsopplosning=false'
+  const underAvvikling =
+    !filters.underAvvikling || filters.underAvvikling === 'underAvviklingAll'
+      ? ''
+      : filters.underAvvikling === 'underAvviklingYes'
+      ? '&underAvvikling=true'
+      : '&underAvvikling=false'
 
   const [page, setPage] = useState(0)
   const [lastPage, setLastPage] = useState(0)
@@ -48,7 +62,9 @@ export function HomePage() {
     organisasjonsnummer +
     fraRegistreringsdato +
     tilRegistreringsdato +
-    konkurs
+    konkurs +
+    tvangsavvikling +
+    underAvvikling
 
   function handleSearch() {
     setPage(0)
