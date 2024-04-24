@@ -1,3 +1,58 @@
+# [TODO]
+
+velge:
+årstall
+kommune
+vise:
+navn
+stiftelsesdato
+organisasjonsnummer
+
+    hvor mange treff
+    hvis resultatet er tomt
+
+# ++
+
+velge/skrive:
+navn
+organisasjonsnummer
+konkurs
+overordnetEnhet
+fraAntallAnsatte tilAntallAnsatte
+registrertIMvaregisteret
+registrertIForetaksregisteret
+registrertIStiftelsesregisteret
+registrertIFrivillighetsregisteret
+frivilligRegistrertIMvaregisteret
+underTvangsavviklingEllerTvangsopplosning
+underAvvikling
+fraRegistreringsdatoEnhetsregisteret tilRegistreringsdatoEnhetsregisteret
+fraStiftelsesdato tilStiftelsesdato
+organisasjonsform
+institusjonellSektorkode
+forretningsadresse.landkode
+postadresse.landkode
+naeringskode
+sisteInnsendteAarsregnskap
+
+https://data.brreg.no/enhetsregisteret/api/enheter?navn=Sesam&fraRegistreringsdatoEnhetsregisteret=2017-10-20&tilRegistreringsdatoEnhetsregisteret=2017-10-20&konkurs=false
+
+# sortere resultat:
+
+stiftelsesdato 1277-09-13-----2024
+registreringsdatoEnhetsregisteret 1995-02-19-----2024
+
+sort={feltnavn},{ASC/DESC}
+https://data.brreg.no/enhetsregisteret/api/enheter?sort=antallAnsatte,DESC
+
+# !!!
+
+markere alle konkursbo i lista med background color og ikon
+
+# +++
+
+lagre brukenes tidligere søkekriteriene i local storage
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
