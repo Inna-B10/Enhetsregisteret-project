@@ -8,7 +8,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path='/Enhetsregisteret-project/' element={<LayoutRoot />}>
+        <Route path='/' element={<LayoutRoot />}>
           <Route index element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='*' element={<NotFoundPage />} />
