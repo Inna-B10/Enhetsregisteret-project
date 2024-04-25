@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import KonkursIcon from '../assets/vite.svg'
 import { BedriftCard } from './BedriftCard'
+// import styles from './BedriftsList.module.css'
 import { DetailsButton } from './DetailsButton'
 
 export function BedriftsList({ enhet }) {

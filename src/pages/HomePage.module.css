@@ -1,0 +1,14 @@
+.bedriftCard {
+  border-radius: 15px;
+  border: 1px solid #c4ad64;
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.bedriftCard:nth-of-type(even) {
+  background-color: #f5e6b6;
+}
+
+.bedriftCard:nth-of-type(odd) {
+  background-color: #FCF5BD;
+}

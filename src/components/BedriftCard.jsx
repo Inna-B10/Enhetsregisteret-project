@@ -1,6 +1,8 @@
+// import styles from './BedriftCard.module.css'
+
 export function BedriftCard({ bedrift }) {
   return (
-    <>
+    <div>
       <ul>
         {bedrift.aktivitet && <li>Aktivitet: {bedrift.aktivitet}</li>}
         {bedrift.isAntallAnsatteRegistrert && (
@@ -106,6 +108,6 @@ export function BedriftCard({ bedrift }) {
         {bedrift.kommuneCode && <li>Kommune nummer: {bedrift.kommuneCode}</li>}
         {bedrift.landCode && <li>Land kode: {bedrift.landCode}</li>}
       </ul>
-    </>
+    </div>
   )
 }

@@ -4,7 +4,7 @@ import { CleanData } from '../components/CleanData'
 import Pagination from '../components/Pagination'
 import SearchInput from '../components/SearchInput'
 import { useFetch } from '../hooks/useFetch'
-import '../index.css'
+import styles from './HomePage.module.css'
 
 export function HomePage() {
   const URL_Bedrifter_API = 'https://data.brreg.no/enhetsregisteret/api/enheter'
@@ -124,59 +124,61 @@ export function HomePage() {
   //console.log(data)
   return (
     <>
-      <h1>Landing page</h1>
+      <h1>Enhetsregisteret projekt</h1>
       <div>
         {isLoading ? (
           'Loading data'
-        ) : (
-          <section>
-            {error ? (
-              'Kunne ikke hente bedrifter data'
-            ) : data ? (
+        ) : error ? (
+          'Kunne ikke hente bedrifter data'
+        ) : data ? (
+          <>
+            <section>
+              <SearchInput
+                handleSearch={handleSearch}
+                filters={filters}
+                updateFilters={updateFilters}
+                resetFilters={resetFilters}
+              />
+            </section>
+            {data._embedded && data._embedded.enheter.length > 0 ? (
               <>
-                <SearchInput
-                  handleSearch={handleSearch}
-                  filters={filters}
-                  updateFilters={updateFilters}
-                  resetFilters={resetFilters}
-                />
-                {data._embedded && data._embedded.enheter.length > 0 ? (
-                  <>
-                    <div>Funnet bedrifter: {data.page.totalElements}</div>
-                    <div>Total antall sider: {data.page.totalPages}</div>
-                    <div>
-                      <ul>
-                        {data._embedded.enheter.map((bedrift, index) => {
-                          const item = CleanData(bedrift)
-                          return (
-                            <li key={index}>
-                              <BedriftsList enhet={item} page={page} />
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                    <Pagination
-                      page={page}
-                      lastPage={lastPage}
-                      prevPage={prevPage}
-                      nextPage={nextPage}
-                    />
-                  </>
-                ) : data.feilmelding ? (
-                  <>
-                    <h3>{data.feilmelding}</h3>
-                    <div>{data.valideringsfeil[0].feilaktigVerdi}</div>
-                    <div>{data.valideringsfeil[0].feilmelding}</div>
-                  </>
-                ) : (
-                  'Ingenting ble funnet for forespørselen din'
-                )}
+                <section>
+                  <div>Funnet bedrifter: {data.page.totalElements}</div>
+                  <div>Total antall sider: {data.page.totalPages}</div>
+                </section>
+                <section>
+                  <ul>
+                    {data._embedded.enheter.map((bedrift, index) => {
+                      const item = CleanData(bedrift)
+                      return (
+                        <li key={index} className={styles.bedriftCard}>
+                          <BedriftsList enhet={item} page={page} />
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </section>
+                <section className='pagination flex center'>
+                  <Pagination
+                    page={page}
+                    lastPage={lastPage}
+                    prevPage={prevPage}
+                    nextPage={nextPage}
+                  />
+                </section>
               </>
+            ) : data.feilmelding ? (
+              <section>
+                <h3>{data.feilmelding}</h3>
+                <div>{data.valideringsfeil[0].feilaktigVerdi}</div>
+                <div>{data.valideringsfeil[0].feilmelding}</div>
+              </section>
             ) : (
-              'Kunne ikke hente bedrifter list'
+              <section>Ingenting ble funnet for forespørselen din</section>
             )}
-          </section>
+          </>
+        ) : (
+          'Kunne ikke hente bedrifter list'
         )}
       </div>
     </>

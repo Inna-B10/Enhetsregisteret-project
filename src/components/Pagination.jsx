@@ -1,6 +1,6 @@
 function Pagination({ page, lastPage, prevPage, nextPage }) {
   return (
-    <div className='pagination'>
+    <>
       <button disabled={page === 0} onClick={prevPage}>
         Prev
       </button>
@@ -8,7 +8,7 @@ function Pagination({ page, lastPage, prevPage, nextPage }) {
       <button disabled={page + 1 === lastPage} onClick={nextPage}>
         Next
       </button>
-    </div>
+    </>
   )
 }
 
