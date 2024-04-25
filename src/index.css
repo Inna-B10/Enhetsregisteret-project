@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #213547;
+  color: #333;
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -39,24 +39,24 @@ img {
 
 body {
   /* display: flex; */
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
   margin: 0 30px 10px;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3rem;
   text-align: center;
   color: #38221D;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  margin: 3rem 0;
+  margin-bottom: 0.5rem;
 }
 
 a {
@@ -71,27 +71,38 @@ a:hover {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  /* border: 2px solid #ee942d; */
+  border: 2px solid #5A362F;
   margin: 15px;
   padding: 10px 20px;
   font-size: inherit;
   font-family: inherit;
   font-weight: 500;
   color: #fff;
-  background-color: #38221D;
+  background-color: #5A362F;
   cursor: pointer;
   transition: border-color 0.25s;
+  /* transition: all .15s ease; */
 }
 
 button:hover {
-  border-color: #F5E6B6;
-  border-style: outset;
+  /* border-color: #F5E6B6;
+  border-style: outset; */
+  /* box-shadow: 0 0 0 1.5px #ee942d; */
+  color: #fff;
+  background-color: #5a362fa9;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* outline: 4px auto -webkit-focus-ring-color; */
 }
+
+/* &.btn-four {
+       &:hover {
+         box-shadow: 0 0 0 4px #379;
+         color: #379;
+       } */
 
 footer p {
   text-align: center;

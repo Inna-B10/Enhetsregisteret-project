@@ -5,10 +5,12 @@
   padding: 15px;
 }
 
-.bedriftCard:nth-of-type(even) {
-  background-color: #f5e6b6;
+.bedriftCard:nth-of-type(odd) {
+  /* background-color: #FCF5BD; */
+  background-color: #FCFBF1;
 }
 
-.bedriftCard:nth-of-type(odd) {
-  background-color: #FCF5BD;
+.bedriftCard:nth-of-type(even) {
+  /* background-color: #f5e6b6; */
+  background-color: #F9F5E6;
 }

@@ -16,9 +16,9 @@ export function BedriftsList({ enhet }) {
 
   return (
     <article>
-      <h1>
+      <h2>
         {enhet.name} {konkursImage}
-      </h1>
+      </h2>
       <ul>
         <li>Organisasjonsnummer: {enhet.organisasjonsnummer}</li>
         <li>Stiftelsesdato: {enhet.stiftelsesdato}</li>
