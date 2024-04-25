@@ -1,5 +1,6 @@
 import { GetKommuner } from './GetKommuner'
 import { SaveSearch } from './SaveSearch'
+import { SearchRadioComp } from './SearchRadioComp'
 
 function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
   return (
@@ -51,8 +52,9 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           }
         />
       </div>
+      <SearchRadioComp filters={filters} updateFilters={updateFilters} />
       {/* --------------------------------- Konkurs */}
-      <div>
+      {/* <div>
         Konkurs:{' '}
         <input
           type='radio'
@@ -78,9 +80,9 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           checked={filters.konkurs === 'konkursAll' ? true : false}
         />{' '}
         Begge
-      </div>
+      </div> */}
       {/* ------------ UnderTvangsavviklingEllerTvangsopplosning */}
-      <div>
+      {/* <div>
         Under Tvangsavvikling eller Tvangsopplosning:{' '}
         <input
           type='radio'
@@ -118,10 +120,10 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           }
         />{' '}
         Begge
-      </div>
+      </div> */}
       {/* ----------------------------- UnderAvvikling */}
-      <div>
-        UnderAvvikling:{' '}
+      {/* <div>
+        Under Avvikling:{' '}
         <input
           type='radio'
           name='underAvvikling'
@@ -154,7 +156,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           }
         />{' '}
         Begge
-      </div>
+      </div> */}
 
       {/* -------------------------------------------------------------------------- */}
       <div>

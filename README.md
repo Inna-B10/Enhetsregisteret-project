@@ -16,18 +16,20 @@ organisasjonsnummer
 velge/skrive:
 navn
 organisasjonsnummer
-konkurs
 fraRegistreringsdatoEnhetsregisteret tilRegistreringsdatoEnhetsregisteret
+konkurs
 underTvangsavviklingEllerTvangsopplosning
 underAvvikling
 
-fraStiftelsesdato tilStiftelsesdato
-fraAntallAnsatte tilAntallAnsatte
 registrertIMvaregisteret
 registrertIForetaksregisteret
 registrertIStiftelsesregisteret
 registrertIFrivillighetsregisteret
 frivilligRegistrertIMvaregisteret
+
+fraStiftelsesdato tilStiftelsesdato
+fraAntallAnsatte tilAntallAnsatte
+
 naeringskode
 sisteInnsendteAarsregnskap
 
