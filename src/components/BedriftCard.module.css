@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bedriftDetaljerLeft {
+  width: 60%;
+  padding: 10px;
+}
+
+.bedriftDetaljerRight {
+  width: 40%;
+  padding: 10px;
+}
+
+.title {
+  font-weight: 600;
+  color: #5A362F;
+}
+
+.attention {
+  color: #e00000;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+hr {
+  margin-top: 10px;
+  border-top: 1px dashed #c4ad64;
+  border-bottom: 1px dashed #fff;
+}
+
+@media screen and (max-width: 1023px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .bedriftDetaljerLeft,
+  .bedriftDetaljerRight {
+    width: 100%
+  }
+
+  ;
+}

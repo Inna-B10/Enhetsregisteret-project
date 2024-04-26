@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import KonkursIcon from '../assets/vite.svg'
 import { BedriftCard } from './BedriftCard'
-// import styles from './BedriftsList.module.css'
+import styles from './BedriftsList.module.css'
 import { DetailsButton } from './DetailsButton'
 
 export function BedriftsList({ enhet }) {
@@ -20,23 +20,27 @@ export function BedriftsList({ enhet }) {
         {enhet.name} {konkursImage}
       </h2>
       <ul>
-        <li>Organisasjonsnummer: {enhet.organisasjonsnummer}</li>
-        <li>Stiftelsesdato: {enhet.stiftelsesdato}</li>
         <li>
-          <div>
-            {detailsVisible ? (
-              <>
-                <BedriftCard bedrift={enhet} />
-                <DetailsButton onClick={() => setDetailsVisible(false)}>
-                  Lukk
-                </DetailsButton>
-              </>
-            ) : (
-              <DetailsButton onClick={() => setDetailsVisible(true)}>
-                Mer detaljer
+          <span className={styles.title}>Organisasjonsnummer:</span>{' '}
+          {enhet.organisasjonsnummer}
+        </li>
+        <li>
+          <span className={styles.title}>Stiftelsesdato: </span>
+          {enhet.stiftelsesdato}
+        </li>
+        <li>
+          {detailsVisible ? (
+            <>
+              <BedriftCard bedrift={enhet} />
+              <DetailsButton onClick={() => setDetailsVisible(false)}>
+                Lukk
               </DetailsButton>
-            )}
-          </div>
+            </>
+          ) : (
+            <DetailsButton onClick={() => setDetailsVisible(true)}>
+              Mer detaljer
+            </DetailsButton>
+          )}
         </li>
       </ul>
     </article>
