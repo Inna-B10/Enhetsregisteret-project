@@ -1,0 +1,20 @@
+.input,
+.select {
+  margin: 0px 40px;
+}
+
+.inputKommuner {
+  width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+
+  .select,
+  .input {
+    width: 100%;
+  }
+
+  .inputKommuner {
+    flex-direction: column;
+  }
+}

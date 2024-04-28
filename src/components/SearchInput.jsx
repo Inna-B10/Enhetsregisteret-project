@@ -1,5 +1,6 @@
 import { GetKommuner } from './GetKommuner'
 import { SaveSearch } from './SaveSearch'
+import styles from './SearchImput.module.css'
 import { SearchRadioComp } from './SearchRadioComp'
 
 function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
@@ -7,50 +8,60 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
     <>
       {/* ------------------------------ Bedriftsnavn */}
       <div>
-        Bedriftsnavn:{' '}
-        <input
-          type='text'
-          value={filters.bedriftName}
-          placeholder='Bedriftsnavn'
-          onChange={(e) => updateFilters({ bedriftName: e.target.value })}
-        />
-      </div>
-      {/* -------------------------------- Kommuner */}
-      <div>
-        <GetKommuner filters={filters} updateFilter={updateFilters} />
+        <div>Bedriftsnavn: </div>
+        <div>
+          <input
+            type='text'
+            value={filters.bedriftName}
+            placeholder='Bedriftsnavn'
+            onChange={(e) => updateFilters({ bedriftName: e.target.value })}
+          />
+        </div>
       </div>
       {/* --------------------------- Organisasjonsnummer */}
       <div>
-        Organisasjonsnummer:{' '}
-        <input
-          type='text'
-          value={filters.organisasjonsnummer}
-          placeholder='Organisasjonsnummer'
-          onChange={(e) =>
-            updateFilters({ organisasjonsnummer: e.target.value })
-          }
-        />
+        <div>Organisasjonsnummer: </div>
+        <div>
+          <input
+            type='text'
+            value={filters.organisasjonsnummer}
+            placeholder='Organisasjonsnummer'
+            onChange={(e) =>
+              updateFilters({ organisasjonsnummer: e.target.value })
+            }
+          />
+        </div>
+      </div>
+      {/* -------------------------------- Kommuner */}
+      <div className={styles.inputKommuner}>
+        <GetKommuner filters={filters} updateFilter={updateFilters} />
       </div>
       {/* ---------------------------- Registreringsdato */}
       <div>
-        Registreringsdato fra:{' '}
-        <input
-          type='text'
-          value={filters.fraRegistreringsdato}
-          placeholder='yyyy-mm-dd'
-          onChange={(e) =>
-            updateFilters({ fraRegistreringsdato: e.target.value })
-          }
-        />
-        til:{' '}
-        <input
-          type='text'
-          value={filters.tilRegistreringsdato}
-          placeholder='yyyy-mm-dd'
-          onChange={(e) =>
-            updateFilters({ tilRegistreringsdato: e.target.value })
-          }
-        />
+        <div>Registreringsdato fra: </div>
+        <div>
+          <input
+            type='text'
+            className={styles.inputDate}
+            value={filters.fraRegistreringsdato}
+            placeholder='yyyy-mm-dd'
+            onChange={(e) =>
+              updateFilters({ fraRegistreringsdato: e.target.value })
+            }
+          />
+        </div>
+        <div>til: </div>
+        <div>
+          <input
+            type='text'
+            className={styles.inputDate}
+            value={filters.tilRegistreringsdato}
+            placeholder='yyyy-mm-dd'
+            onChange={(e) =>
+              updateFilters({ tilRegistreringsdato: e.target.value })
+            }
+          />
+        </div>
       </div>
       <SearchRadioComp filters={filters} updateFilters={updateFilters} />
       {/* --------------------------------- Konkurs */}

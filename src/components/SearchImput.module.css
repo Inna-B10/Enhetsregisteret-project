@@ -1,0 +1,16 @@
+/* .inputKommuner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+.inputDate {
+  margin-right: 40px;
+}
+
+@media screen and (mix-width: 1023px) {
+  .inputKommuner {
+    flex-direction: row;
+  }
+
+}

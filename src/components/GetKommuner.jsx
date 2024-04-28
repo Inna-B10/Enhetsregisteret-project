@@ -34,32 +34,36 @@ function KommunerList({ list, filters, updateFilter }) {
   }
   return (
     <>
-      Kommune navn:{' '}
-      <select
-        value={filters.selectedKommune}
-        onChange={(e) => {
-          updateFilter({
-            kommuneCode: e.target.selectedOptions[0].attributes.code.value,
-            kommuneName: e.target.value,
-            selectedKommune: e.target.value,
-          })
-        }}>
-        <option code={''}></option>
-        {list.map((kommune) => {
-          return (
-            <option key={kommune.code} code={kommune.code}>
-              {kommune.name}
-            </option>
-          )
-        })}
-      </select>
-      Kommune nummer:{' '}
-      <input
-        type='text'
-        value={filters.kommuneCode}
-        placeholder='Kommune nummer'
-        onChange={(e) => updateFilter({ kommuneCode: e.target.value })}
-      />
+      <div>Kommune navn: </div>
+      <div>
+        <select
+          value={filters.selectedKommune}
+          onChange={(e) => {
+            updateFilter({
+              kommuneCode: e.target.selectedOptions[0].attributes.code.value,
+              kommuneName: e.target.value,
+              selectedKommune: e.target.value,
+            })
+          }}>
+          <option code={''}></option>
+          {list.map((kommune) => {
+            return (
+              <option key={kommune.code} code={kommune.code}>
+                {kommune.name}
+              </option>
+            )
+          })}
+        </select>
+      </div>
+      <div>Kommune nummer: </div>
+      <div>
+        <input
+          type='text'
+          value={filters.kommuneCode}
+          placeholder='Kommune nummer'
+          onChange={(e) => updateFilter({ kommuneCode: e.target.value })}
+        />
+      </div>
     </>
   )
 }
