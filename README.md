@@ -8,8 +8,7 @@
 - stiftelsesdato
 - organisasjonsnummer
 
-`hvor mange treff
-hvis resultatet er tomt`
+`hvor mange treff + hvis resultatet er tomt`
 
 ## ++
 
