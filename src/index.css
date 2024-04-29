@@ -89,8 +89,8 @@ button {
 }
 
 button:hover {
-  color: #fff;
-  background-color: #5a362fa9;
+  color: #5A362F;
+  background-color: #C4AD64;
 }
 
 select,
@@ -98,7 +98,7 @@ input:not([type="radio"]) {
   width: 90vw;
   padding: 2px;
   border-radius: 4px;
-  border: 2px solid #c4ad64;
+  border: 2px solid #E1BB7A;
   text-indent: 10px;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -228,7 +228,7 @@ nav {
   width: 100%;
   padding: 2vh 3vw;
   justify-content: right;
-  background-color: #C4AD64;
+  background-color: #E1BB7A;
 }
 
 nav ul {
