@@ -22,9 +22,9 @@
 
 /* Selected text */
 ::selection {
-  color: #ffffff;
-  background: #e862ff;
-  -webkit-text-fill-color: #fff;
+  color: #38221D;
+  background: #EE942D;
+  -webkit-text-fill-color: #38221D;
 }
 
 *:focus-visible {
@@ -86,7 +86,6 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   box-shadow: 1px 1px 4px 0px #666666;
-  /* transition: all .15s ease; */
 }
 
 button:hover {
@@ -129,11 +128,10 @@ ul {
 
 #root {
   /* max-width: 1280px; */
-  /* min-width: 365px; */
+  min-width: 100vw;
   min-height: 100vh;
-  /* margin: 0 auto; */
-  padding: 2vh 2vw;
-  /* font-size: calc(1rem + 0.5vw); */
+  padding: 0 2vw 2vh;
+  margin: 0 auto;
 }
 
 
@@ -149,9 +147,6 @@ ul {
 /* https://codepen.io/It-Kurs/pen/vYPOrJv?editors=1100 */
 .ham {
   z-index: 2;
-  position: absolute;
-  top: 0px;
-  right: 23px;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   -moz-user-select: none;
@@ -171,17 +166,17 @@ ul {
 
 .ham.active .top {
   stroke-dashoffset: -64px;
-  stroke: #7D4C41;
+  stroke: #5A362F;
 }
 
 .ham.active .middle {
   transform: rotate(90deg);
-  stroke: #7D4C41;
+  stroke: #5A362F;
 }
 
 .ham.active .bottom {
   stroke-dashoffset: -64px;
-  stroke: #7D4C41;
+  stroke: #5A362F;
 }
 
 .hamRotate.active {
@@ -213,20 +208,24 @@ ul {
 
 a {
   font-weight: 800;
-  color: #7D4C41;
+  color: #5A362F;
   text-decoration: none;
 }
 
 a:hover {
-  color: #38221D;
+  color: #fff;
 }
 
 nav {
-  padding-right: 20px;
+  width: 100%;
+  padding: 10px;
+  justify-content: right;
+  background-color: #C4AD64;
+  border-radius: 0 0 10px 10px;
 }
 
 nav ul {
-  justify-content: right;
+  display: flex;
 }
 
 nav ul > li {
@@ -242,18 +241,18 @@ nav ul > li {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 425px) {
+  nav {
+    padding: 0 0;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   .nav-bar {
-    display: block;
-    position: absolute;
-    right: 120px;
-    top: 0px;
+    display: flex;
+    flex-direction: column;
     text-align: right;
-    padding: 30px 10px 5px 18px;
-    /* background-color: rgba(165, 88, 58, 0.7); */
-    border-radius: 0px 0 0 10px;
-    transform-origin: 0% 0%;
-    transform: translate(100%, 0);
+    padding: 0 10px 5px;
   }
 
   .hidden {

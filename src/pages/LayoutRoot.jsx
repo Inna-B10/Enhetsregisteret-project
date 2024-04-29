@@ -1,14 +1,15 @@
 import { NavLink, Outlet } from 'react-router-dom'
 export function LayoutRoot() {
+  function toggleMenu() {
+    document.querySelector('.nav-bar').classList.toggle('hidden')
+    document.querySelector('nav svg').classList.toggle('active')
+  }
   return (
     <>
       <header>
-        <nav>
+        <nav className='flex'>
           <svg
-            onClick={() => {
-              document.querySelector('.nav-bar').classList.toggle('hidden')
-              document.querySelector('nav svg').classList.toggle('active')
-            }}
+            onClick={() => toggleMenu()}
             className='ham hamRotate hidden-invert'
             viewBox='0 0 100 100'
             width='40'>
@@ -22,21 +23,20 @@ export function LayoutRoot() {
               d='m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20'
             />
           </svg>
-          <ul
-            className='nav-bar hidden'
-            // onClick={(e) => e.target.classList.toggle('hidden')}
-          >
+          <ul className='nav-bar hidden'>
             <li>
               <NavLink
                 to='/'
-                className={({ isActive }) => (isActive ? 'active' : '')}>
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                onClick={() => toggleMenu()}>
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink
                 to='/about'
-                className={({ isActive }) => (isActive ? 'active' : '')}>
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                onClick={() => toggleMenu()}>
                 About
               </NavLink>
             </li>
@@ -44,6 +44,7 @@ export function LayoutRoot() {
         </nav>
       </header>
       <main>
+        <h1>Enhetsregisteret prosjekt</h1>
         <Outlet />
       </main>
 

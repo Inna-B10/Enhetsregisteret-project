@@ -48,7 +48,7 @@ export function SearchRadioComp({ filters, updateFilters }) {
             onChange={() => updateFilters({ ...filters, [term]: `${term}All` })}
             checked={filters[term] === `${term}All` ? true : false}
           />{' '}
-          Begge
+          Alle
         </div>
       </div>
     )

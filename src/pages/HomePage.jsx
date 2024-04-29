@@ -124,7 +124,6 @@ export function HomePage() {
   //console.log(data)
   return (
     <>
-      <h1>Enhetsregisteret projekt</h1>
       <div>
         {isLoading ? (
           'Loading data'
