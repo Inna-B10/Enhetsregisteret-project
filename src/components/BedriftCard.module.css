@@ -22,7 +22,7 @@
 .attention {
   color: #e00000;
   font-weight: 800;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 hr {

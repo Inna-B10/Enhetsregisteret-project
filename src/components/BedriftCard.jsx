@@ -8,157 +8,155 @@ export function BedriftCard({ bedrift }) {
         <div className={styles.bedriftDetaljerLeft}>
           {bedrift.aktivitet && (
             <div>
-              <span className={styles.title}>Aktivitet:</span>{' '}
-              {bedrift.aktivitet}
+              <div className={styles.title}>Aktivitet: </div>
+              <div>{bedrift.aktivitet}</div>
             </div>
           )}
           {bedrift.isAntallAnsatteRegistrert && (
             <div>
-              <span className={styles.title}>
-                Har registrert antall ansatter:
-              </span>{' '}
-              {bedrift.isAntallAnsatteRegistrert}
+              <div className={styles.title}>
+                Har registrert antall ansatte:{' '}
+              </div>
+              <div>{bedrift.isAntallAnsatteRegistrert}</div>
             </div>
           )}
-          {bedrift.antallAnsatter && (
+          {bedrift.antallAnsatte && (
             <div>
-              <span className={styles.title}>Antall ansatter:</span>{' '}
-              {bedrift.antallAnsatter}
+              <div className={styles.title}>Antall ansatte: </div>
+              <div>{bedrift.antallAnsatte}</div>
             </div>
           )}
           {bedrift.forretningsAdresse && (
             <div>
-              <span className={styles.title}>Forretningsadresse:</span>{' '}
-              {bedrift.forretningsAdresse}
+              <div className={styles.title}>Forretningsadresse: </div>
+              <div>{bedrift.forretningsAdresse}</div>
             </div>
           )}
           {bedrift.hjelpeenhetskodeDesc && (
             <div>
-              <span className={styles.title}>
-                Hjelpeenhetskode beskrivelse:
-              </span>{' '}
-              {bedrift.hjelpeenhetskodeDesc}
+              <div className={styles.title}>Hjelpeenhetskode beskrivelse: </div>
+              <div>{bedrift.hjelpeenhetskodeDesc}</div>
             </div>
           )}
           {bedrift.hjelpeenhetskodeCode && (
             <div>
-              <span className={styles.title}>Hjelpeenhetskode:</span>{' '}
-              {bedrift.hjelpeenhetskodeCode}
+              <div className={styles.title}>Hjelpeenhetskode: </div>
+              <div>{bedrift.hjelpeenhetskodeCode}</div>
             </div>
           )}
           {bedrift.hjemmeside && (
             <div>
-              <span className={styles.title}>Hjemmeside:</span>{' '}
-              {bedrift.hjemmeside}
+              <div className={styles.title}>Hjemmeside: </div>
+              <div>{bedrift.hjemmeside}</div>
             </div>
           )}
           {bedrift.institusjonellSektorDesc && (
             <div>
-              <span className={styles.title}>
-                Institusjonell sektor beskrivelse:
-              </span>{' '}
-              {bedrift.institusjonellSektorDesc}
+              <div className={styles.title}>
+                Institusjonell sektor beskrivelse:{' '}
+              </div>
+              <div>{bedrift.institusjonellSektorDesc}</div>
             </div>
           )}
           {bedrift.institusjonellSektorCode && (
             <div>
-              <span className={styles.title}>Institusjonell sektor kode:</span>{' '}
-              {bedrift.institusjonellSektorCode}
+              <div className={styles.title}>Institusjonell sektor kode: </div>
+              <div>{bedrift.institusjonellSektorCode}</div>
             </div>
           )}
           {bedrift.naeringskodeDesc && (
             <div>
-              <span className={styles.title}>Næringskode beskrivelse:</span>{' '}
-              {bedrift.naeringskodeDesc}
+              <div className={styles.title}>Næringskode beskrivelse: </div>
+              <div>{bedrift.naeringskodeDesc}</div>
             </div>
           )}
           {bedrift.naeringskodeCode && (
             <div>
-              <span className={styles.title}>Næringskode:</span>{' '}
-              {bedrift.naeringskodeCode}
+              <div className={styles.title}>Næringskode: </div>
+              <div>{bedrift.naeringskodeCode}</div>
             </div>
           )}
           {bedrift.organisasjonsformDesc && (
             <div>
-              <span className={styles.title}>
-                Organisasjonsform beskrivelse:
-              </span>{' '}
-              {bedrift.organisasjonsformDesc}
+              <div className={styles.title}>
+                Organisasjonsform beskrivelse:{' '}
+              </div>
+              <div>{bedrift.organisasjonsformDesc}</div>
             </div>
           )}
           {bedrift.organisasjonsformCode && (
             <div>
-              <span className={styles.title}>Organisasjonsform kode:</span>{' '}
-              {bedrift.organisasjonsformCode}
+              <div className={styles.title}>Organisasjonsform kode: </div>
+              <div>{bedrift.organisasjonsformCode}</div>
             </div>
           )}
         </div>
         <div className={styles.bedriftDetaljerRight}>
           {bedrift.postadresse && (
             <div>
-              <span className={styles.title}>Postadresse:</span>{' '}
-              {bedrift.postadresse}
+              <div className={styles.title}>Postadresse: </div>
+              <div>{bedrift.postadresse}</div>
             </div>
           )}
           {bedrift.registrertIForetaksregisteret && (
             <div>
-              <span className={styles.title}>
-                Registrert i Foretaksregisteret:
-              </span>{' '}
-              {bedrift.registrertIForetaksregisteret}
+              <div className={styles.title}>
+                Registrert i Foretaksregisteret:{' '}
+              </div>
+              <div>{bedrift.registrertIForetaksregisteret}</div>
             </div>
           )}
           {bedrift.registrertIFrivillighetsregisteret && (
             <div>
-              <span className={styles.title}>
-                Registrert i Frivillighetsregisteret:
-              </span>{' '}
-              {bedrift.registrertIFrivillighetsregisteret}
+              <div className={styles.title}>
+                Registrert i Frivillighetsregisteret:{' '}
+              </div>
+              <div>{bedrift.registrertIFrivillighetsregisteret}</div>
             </div>
           )}
           {bedrift.registrertIMvaregisteret && (
             <div>
-              <span className={styles.title}>Registrert i MVA-registeret:</span>{' '}
-              {bedrift.registrertIMvaregisteret}
+              <div className={styles.title}>Registrert i MVA-registeret: </div>
+              <div>{bedrift.registrertIMvaregisteret}</div>
             </div>
           )}
           {bedrift.registrertIStiftelsesregisteret && (
             <div>
-              <span className={styles.title}>
-                Registrert i Stiftelsesregisteret:
-              </span>{' '}
-              {bedrift.registrertIStiftelsesregisteret}
+              <div className={styles.title}>
+                Registrert i Stiftelsesregisteret:{' '}
+              </div>
+              <div>{bedrift.registrertIStiftelsesregisteret}</div>
             </div>
           )}
           {bedrift.sisteInnsendteAarsregnskap && (
             <div>
-              <span className={styles.title}>Siste innsendte årsregnskap:</span>{' '}
-              {bedrift.sisteInnsendteAarsregnskap}
+              <div className={styles.title}>Siste innsendte årsregnskap: </div>
+              <div>{bedrift.sisteInnsendteAarsregnskap}</div>
             </div>
           )}
           {bedrift.registreringsDato && (
             <div>
-              <span className={styles.title}>Registreringsdato:</span>{' '}
-              {bedrift.registreringsDato}
+              <div className={styles.title}>Registreringsdato: </div>
+              <div>{bedrift.registreringsDato}</div>
             </div>
           )}
           {bedrift.tvangsavvikletPgaManglendeSlettingDato && (
             <div>
-              <span className={styles.title}>
-                Tvangsavviklet pga manglende sletting dato:
-              </span>{' '}
-              {bedrift.tvangsavvikletPgaManglendeSlettingDato}
+              <div className={styles.title}>
+                Tvangsavviklet pga manglende sletting dato:{' '}
+              </div>
+              <div>{bedrift.tvangsavvikletPgaManglendeSlettingDato}</div>
             </div>
           )}
           {bedrift.konkurs && (
             <div className={bedrift.konkurs === 'Ja' ? styles.attention : ''}>
-              <span
+              <div
                 className={
                   bedrift.konkurs === 'Ja' ? styles.attention : styles.title
                 }>
-                Konkurs:
-              </span>{' '}
-              {bedrift.konkurs}
+                Konkurs:{' '}
+              </div>
+              <div>{bedrift.konkurs}</div>
             </div>
           )}
           {bedrift.underAvvikling && (
@@ -166,21 +164,21 @@ export function BedriftCard({ bedrift }) {
               className={
                 bedrift.underAvvikling === 'Ja' ? styles.attention : ''
               }>
-              <span
+              <div
                 className={
                   bedrift.underAvvikling === 'Ja'
                     ? styles.attention
                     : styles.title
                 }>
-                Under avvikling:
-              </span>{' '}
-              {bedrift.underAvvikling}
+                Under avvikling:{' '}
+              </div>
+              <div>{bedrift.underAvvikling}</div>
             </div>
           )}
           {bedrift.underAvviklingDato && (
             <div>
-              <span className={styles.title}>Under avvikling dato:</span>{' '}
-              {bedrift.underAvviklingDato}
+              <div className={styles.title}>Under avvikling dato: </div>
+              <div>{bedrift.underAvviklingDato}</div>
             </div>
           )}
           {bedrift.underTvangsavviklingEllerTvangsopplosning && (
@@ -190,49 +188,51 @@ export function BedriftCard({ bedrift }) {
                   ? styles.attention
                   : ''
               }>
-              <span
+              <div
                 className={
                   bedrift.underTvangsavviklingEllerTvangsopplosning === 'Ja'
                     ? styles.attention
                     : styles.title
                 }>
-                Under tvangsavvikling eller tvangsopplosning:
-              </span>{' '}
-              {bedrift.underTvangsavviklingEllerTvangsopplosning}
+                Under tvangsavvikling eller tvangsopplosning:{' '}
+              </div>
+              <div>{bedrift.underTvangsavviklingEllerTvangsopplosning}</div>
             </div>
           )}
           {bedrift.vedtektsdato && (
             <div>
-              <span className={styles.title}>Vedtektsdato:</span>{' '}
-              {bedrift.vedtektsdato}
+              <div className={styles.title}>Vedtektsdato: </div>
+              <div>{bedrift.vedtektsdato}</div>
             </div>
           )}
           {bedrift.vedtektsfestetFormaal && (
             <div>
-              <span className={styles.title}>Vedtektsfestet formål:</span>{' '}
-              {bedrift.vedtektsfestetFormaal}
+              <div className={styles.title}>Vedtektsfestet formål: </div>
+              <div>{bedrift.vedtektsfestetFormaal}</div>
             </div>
           )}
           {bedrift.kommune && (
             <div>
-              <span className={styles.title}>Kommune:</span> {bedrift.kommune}
+              <div className={styles.title}>Kommune: </div>
+              <div>{bedrift.kommune}</div>
             </div>
           )}
           {bedrift.kommuneCode && (
             <div>
-              <span className={styles.title}>Kommune nummer: </span>
-              {bedrift.kommuneCode}
+              <div className={styles.title}>Kommune nummer: </div>
+              <div>{bedrift.kommuneCode}</div>
             </div>
           )}
           {bedrift.landCode && (
             <div>
-              <span className={styles.title}>Land kode:</span>{' '}
-              {bedrift.landCode}
-              {bedrift.lang && (
-                <div>
-                  <span className={styles.title}>Språk:</span> {bedrift.lang}
-                </div>
-              )}
+              <div className={styles.title}>Land kode: </div>
+              <div>{bedrift.landCode}</div>
+            </div>
+          )}
+          {bedrift.lang && (
+            <div>
+              <div className={styles.title}>Språk: </div>
+              <div>{bedrift.lang}</div>
             </div>
           )}
         </div>

@@ -60,13 +60,6 @@
   -webkit-user-drag: none;
 } */
 
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  padding: 2vh 2vw;
-  font-size: calc(1rem + 0.5vw);
-}
-
 h1 {
   font-size: calc(1rem + 3vw);
   text-align: center;
@@ -79,15 +72,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-a {
-  font-weight: 800;
-  color: #38221D;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #7D4C41;
-}
 
 button {
   font-size: inherit;
@@ -142,6 +126,105 @@ ul {
   list-style: none;
 }
 
+
+#root {
+  /* max-width: 1280px; */
+  /* min-width: 365px; */
+  min-height: 100vh;
+  /* margin: 0 auto; */
+  padding: 2vh 2vw;
+  /* font-size: calc(1rem + 0.5vw); */
+}
+
+
+.pagination {
+  margin: 3rem auto;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+/* ------------------------------- Toggle icon ------------------------------ */
+/* https://codepen.io/It-Kurs/pen/vYPOrJv?editors=1100 */
+.ham {
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: 23px;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #38221D;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham.active .top {
+  stroke-dashoffset: -64px;
+  stroke: #7D4C41;
+}
+
+.ham.active .middle {
+  transform: rotate(90deg);
+  stroke: #7D4C41;
+}
+
+.ham.active .bottom {
+  stroke-dashoffset: -64px;
+  stroke: #7D4C41;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+
+.ham .top {
+  stroke-dasharray: 40 160;
+}
+
+.ham .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+
+.ham .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+/* --------------------------End icon----------------------------------- */
+.active {
+  text-decoration: underline 2px;
+  text-underline-offset: 3px;
+}
+
+a {
+  font-weight: 800;
+  color: #7D4C41;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #38221D;
+}
+
+nav {
+  padding-right: 20px;
+}
+
 nav ul {
   justify-content: right;
 }
@@ -151,22 +234,35 @@ nav ul > li {
   font-size: 1.1rem;
 }
 
-#root {
-  /* max-width: 1280px; */
-  margin: 0 auto;
+.hidden {
+  display: flex;
 }
 
-.active {
-  text-decoration: underline 2px;
-  text-underline-offset: 3px;
+.hidden-invert {
+  display: none;
 }
 
-.pagination {
-  margin: 3rem auto;
-}
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    display: block;
+    position: absolute;
+    right: 120px;
+    top: 0px;
+    text-align: right;
+    padding: 30px 10px 5px 18px;
+    /* background-color: rgba(165, 88, 58, 0.7); */
+    border-radius: 0px 0 0 10px;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+  }
 
-.bold {
-  font-weight: 800;
+  .hidden {
+    display: none;
+  }
+
+  .hidden-invert {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1023px) {

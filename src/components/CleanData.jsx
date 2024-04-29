@@ -4,7 +4,7 @@ export const CleanData = (data) => {
     data.harRegistrertAntallAnsatte && data.harRegistrertAntallAnsatte
       ? 'Ja'
       : 'Nei'
-  const antallAnsatter = data.antallAnsatter && data.antallAnsatter
+  const antallAnsatte = data.antallAnsatte && data.antallAnsatte
   const forretningsAdresse =
     data.forretningsadresse &&
     data.forretningsadresse.adresse +
@@ -125,7 +125,7 @@ export const CleanData = (data) => {
     name,
     aktivitet,
     isAntallAnsatteRegistrert,
-    antallAnsatter,
+    antallAnsatte,
     forretningsAdresse,
     hjelpeenhetskodeDesc,
     hjelpeenhetskodeCode,

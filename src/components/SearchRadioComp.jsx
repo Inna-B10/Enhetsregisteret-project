@@ -9,12 +9,21 @@ export function SearchRadioComp({ filters, updateFilters }) {
     // 'registrertIFrivillighetsregisteret',
     // 'frivilligRegistrertIMvaregisteret',
   ]
-
+  function upperCase(str) {
+    const s1 = str
+    const s2 = s1.toLowerCase()
+    let result = ''
+    for (let i = 0; i < s1.length; i++) {
+      if (s1[i] !== s2[i]) result = result + ' ' + s1[i]
+      else result = result + s2[i]
+    }
+    result = result[0].toUpperCase() + result.slice(1).toLowerCase()
+    return result
+  }
   return typeRadio.map((term, index) => {
-    // console.log(filters.term)
     return (
       <div key={index}>
-        <div>{term}: </div>
+        <div>{upperCase(term)}: </div>
         <div>
           <input
             type='radio'
