@@ -22,7 +22,6 @@
 .attention {
   color: #e00000;
   font-weight: 800;
-  /* text-decoration: underline; */
 }
 
 hr {
@@ -31,7 +30,7 @@ hr {
   border-bottom: 1px dashed #fff;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .card {
     flex-direction: column;
   }
@@ -40,6 +39,4 @@ hr {
   .bedriftDetaljerRight {
     width: 100%
   }
-
-  ;
 }

@@ -1,15 +1,14 @@
 import { useState } from 'react'
-import KonkursIcon from '../assets/vite.svg'
+import KonkursIcon from '../assets/triangle-exclamation.svg'
 import { BedriftCard } from './BedriftCard'
 import styles from './BedriftsList.module.css'
 import { DetailsButton } from './DetailsButton'
 
 export function BedriftsList({ enhet }) {
-  // console.log(enhet)
   const [detailsVisible, setDetailsVisible] = useState(false)
   const konkursImage =
     enhet.konkurs.toLowerCase() === 'ja' ? (
-      <img src={KonkursIcon} alt='konkurs icon' />
+      <img src={KonkursIcon} alt='Enheten er konkurs' width={40} />
     ) : (
       ''
     )

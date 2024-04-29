@@ -35,7 +35,7 @@ function KommunerList({ list, filters, updateFilter }) {
   }
   return (
     <>
-      <div>Kommune navn: </div>
+      <div className={styles.title}>Kommune navn: </div>
       <div>
         <select
           className={styles.select}

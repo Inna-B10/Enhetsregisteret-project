@@ -38,8 +38,9 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
       </div>
       {/* ---------------------------- Registreringsdato */}
       <div className={styles.breakPoint}>
-        <div>Registreringsdato fra: </div>
+        <div>Registreringsdato: </div>
         <div className={styles.fra}>
+          fra{' '}
           <input
             type='text'
             className={styles.inputDate}
@@ -50,8 +51,8 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
             }
           />
         </div>
-        <div>til: </div>
         <div className={styles.til}>
+          til{' '}
           <input
             type='text'
             className={styles.inputDate}

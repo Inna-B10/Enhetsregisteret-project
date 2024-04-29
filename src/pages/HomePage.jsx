@@ -112,7 +112,7 @@ export function HomePage() {
     })
   }
   useEffect(() => {
-    // console.log(filters)
+    console.log(filters)
   }, [filters])
 
   useEffect(() => {
@@ -121,7 +121,6 @@ export function HomePage() {
     }
   }, [data])
 
-  //console.log(data)
   return (
     <>
       <div>
@@ -157,7 +156,7 @@ export function HomePage() {
                     })}
                   </ul>
                 </section>
-                <section id='pagination' className='pagination flex center'>
+                <section id='pagination' className='flex center'>
                   <Pagination
                     page={page}
                     lastPage={lastPage}

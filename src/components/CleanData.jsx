@@ -105,22 +105,6 @@ export const CleanData = (data) => {
     ? data.forretningsadresse.kommunenummer
     : false
 
-  //forretningsadresse - adresse
-  // :
-  // (2) ['c/o Gjørva', 'Hellerud gårdsvei 5B']
-
-  // aktivitet
-  // :
-  // (2) ['Oversettingstjenester for dokumenter, tjenester, film og media med', 'mere.']
-
-  // vedtektsfestetFormaal
-  // :
-  // (2) ['Investeringer, eiendom, konsulentvirksomhet og rådgivning innenfor', 'finansielle områder samt forretningsutvikling.']
-
-  // organisasjonsform
-  // :
-  // {kode: 'ENK', beskrivelse: 'Enkeltpersonforetak', _links: {…}}
-
   const bedrift = {
     name,
     aktivitet,
