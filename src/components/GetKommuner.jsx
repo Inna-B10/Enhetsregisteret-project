@@ -1,4 +1,5 @@
 import { useFetch } from '../hooks/useFetch'
+import styles from './GetKommuner.module.css'
 
 const URL_Kommuner_API = 'https://data.ssb.no/api/klass/v1/versions/1710'
 
@@ -37,6 +38,7 @@ function KommunerList({ list, filters, updateFilter }) {
       <div>Kommune navn: </div>
       <div>
         <select
+          className={styles.select}
           value={filters.selectedKommune}
           onChange={(e) => {
             updateFilter({
@@ -58,9 +60,10 @@ function KommunerList({ list, filters, updateFilter }) {
       <div>Kommune nummer: </div>
       <div>
         <input
+          className={styles.input}
           type='text'
           value={filters.kommuneCode}
-          placeholder='Kommune nummer'
+          placeholder='####'
           onChange={(e) => updateFilter({ kommuneCode: e.target.value })}
         />
       </div>

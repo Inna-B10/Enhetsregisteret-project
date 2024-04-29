@@ -1,3 +1,4 @@
+import styles from './SearchRadio.module.css'
 export function SearchRadioComp({ filters, updateFilters }) {
   const typeRadio = [
     'konkurs',
@@ -22,7 +23,7 @@ export function SearchRadioComp({ filters, updateFilters }) {
   }
   return typeRadio.map((term, index) => {
     return (
-      <div key={index}>
+      <div key={index} className={styles.breakPoint}>
         <div>{upperCase(term)}: </div>
         <div>
           <input
@@ -32,7 +33,7 @@ export function SearchRadioComp({ filters, updateFilters }) {
             onChange={() => updateFilters({ ...filters, [term]: `${term}Yes` })}
             checked={filters[term] === `${term}Yes` ? true : false}
           />{' '}
-          Ja
+          <span className={styles.spanRight}>Ja</span>
           <input
             type='radio'
             name={term}
@@ -40,7 +41,7 @@ export function SearchRadioComp({ filters, updateFilters }) {
             onChange={() => updateFilters({ ...filters, [term]: `${term}No` })}
             checked={filters[term] === `${term}No` ? true : false}
           />{' '}
-          Nei
+          <span className={styles.spanRight}>Nei</span>
           <input
             type='radio'
             name={term}

@@ -131,7 +131,7 @@ export function HomePage() {
           'Kunne ikke hente bedrifter data'
         ) : data ? (
           <>
-            <section>
+            <section id='search-input' className='flex column'>
               <SearchInput
                 handleSearch={handleSearch}
                 filters={filters}
@@ -141,11 +141,11 @@ export function HomePage() {
             </section>
             {data._embedded && data._embedded.enheter.length > 0 ? (
               <>
-                <section>
+                <section id='search-result'>
                   <div>Funnet bedrifter: {data.page.totalElements}</div>
                   <div>Total antall sider: {data.page.totalPages}</div>
                 </section>
-                <section>
+                <section id='bedrift-list'>
                   <ul>
                     {data._embedded.enheter.map((bedrift, index) => {
                       const item = CleanData(bedrift)
@@ -157,7 +157,7 @@ export function HomePage() {
                     })}
                   </ul>
                 </section>
-                <section className='pagination flex center'>
+                <section id='pagination' className='pagination flex center'>
                   <Pagination
                     page={page}
                     lastPage={lastPage}

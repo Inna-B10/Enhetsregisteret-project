@@ -43,7 +43,7 @@ export function LayoutRoot() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className='flex column'>
         <h1>Enhetsregisteret prosjekt</h1>
         <Outlet />
       </main>

@@ -1,0 +1,19 @@
+  .spanRight {
+    margin-right: 40px;
+  }
+
+  .breakPoint {
+    width: 100%;
+  }
+
+
+  /* @media screen and (max-width: 767px) {
+
+} */
+
+  @media screen and (min-width: 768px) {
+    .breakPoint {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

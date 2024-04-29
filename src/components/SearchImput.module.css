@@ -1,16 +1,32 @@
-/* .inputKommuner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
+@media screen and (min-width: 768px) {
 
-.inputDate {
-  margin-right: 40px;
-}
-
-@media screen and (mix-width: 1023px) {
-  .inputKommuner {
-    flex-direction: row;
+  .breakPoint {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
+
+  .breakPoint input {
+    width: 100% !important;
+    margin-left: 5px;
+  }
+
+  .breakPoint > div:nth-of-type(2) {
+    width: 100%;
+  }
+
+  .inputDate :nth-of-type(1) {
+    margin-right: 5px;
+    width: 100%;
+  }
+
+  .fra {
+    width: fit-content !important;
+  }
+
+  .til {
+    width: fit-content !important;
+  }
+
 
 }

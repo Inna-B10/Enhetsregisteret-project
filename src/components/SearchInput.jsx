@@ -7,7 +7,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
   return (
     <>
       {/* ------------------------------ Bedriftsnavn */}
-      <div>
+      <div className={styles.breakPoint}>
         <div>Bedriftsnavn: </div>
         <div>
           <input
@@ -19,7 +19,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
         </div>
       </div>
       {/* --------------------------- Organisasjonsnummer */}
-      <div>
+      <div className={styles.breakPoint}>
         <div>Organisasjonsnummer: </div>
         <div>
           <input
@@ -33,13 +33,13 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
         </div>
       </div>
       {/* -------------------------------- Kommuner */}
-      <div className={styles.inputKommuner}>
+      <div className={styles.breakPoint}>
         <GetKommuner filters={filters} updateFilter={updateFilters} />
       </div>
       {/* ---------------------------- Registreringsdato */}
-      <div>
+      <div className={styles.breakPoint}>
         <div>Registreringsdato fra: </div>
-        <div>
+        <div className={styles.fra}>
           <input
             type='text'
             className={styles.inputDate}
@@ -51,7 +51,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           />
         </div>
         <div>til: </div>
-        <div>
+        <div className={styles.til}>
           <input
             type='text'
             className={styles.inputDate}
