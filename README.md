@@ -40,7 +40,8 @@
 
 // organisasjonsform
 // :
-// {kode: 'ENK', beskrivelse: 'Enkeltpersonforetak', \_links: {…}}```
+// {kode: 'ENK', beskrivelse: 'Enkeltpersonforetak', \_links: {…}}
+```
 
 registrertIMvaregisteret
 registrertIForetaksregisteret
