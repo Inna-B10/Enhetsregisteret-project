@@ -1,4 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import GithubLogo from '../assets/github.svg'
+import JobloopLogo from '../assets/jobloop-logo-color.png'
 export function LayoutRoot() {
   function toggleMenu() {
     document.querySelector('.nav-bar').classList.toggle('hidden')
@@ -42,14 +44,42 @@ export function LayoutRoot() {
             </li>
           </ul>
         </nav>
+        <div id='title'>
+          <h1>Enhetsregisteret prosjekt</h1>
+        </div>
       </header>
       <main className='flex column'>
-        <h1>Enhetsregisteret prosjekt</h1>
         <Outlet />
       </main>
 
       <footer>
-        <p>Module D</p>
+        <p>
+          <img
+            className='jobloop'
+            src={JobloopLogo}
+            alt='Jobloop - matchmaking i arbeidslivet skaper muligheter for mange!'
+            width={60}
+          />{' '}
+          <a
+            href='https://jobloop.no/kodehode-modellen'
+            target='_blank'
+            title='JobLoop - Kodehode'>
+            Kodehode
+          </a>
+          <div className='vr'></div>
+          <img
+            className='github'
+            src={GithubLogo}
+            alt='Project on GitHub'
+            width={25}
+          />
+          <a
+            href='https://github.com/Inna-B10/Enhetsregisteret-project'
+            target='_blank'
+            title='React project - Enhetsregisteret'>
+            Module D - React project
+          </a>
+        </p>
       </footer>
     </>
   )
