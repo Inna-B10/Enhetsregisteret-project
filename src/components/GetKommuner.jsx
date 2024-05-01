@@ -39,6 +39,7 @@ function KommunerList({ list, filters, updateFilter }) {
       <div className={styles.inputFieldList}>
         <div>
           <select
+            name='districtName'
             className={styles.navn}
             value={filters.selectedKommune}
             onChange={(e) => {
@@ -62,6 +63,7 @@ function KommunerList({ list, filters, updateFilter }) {
           <div className={styles.title}>Kommune nummer: </div>
           <div>
             <input
+              name='districtCode'
               className={styles.code}
               type='text'
               value={filters.kommuneCode}

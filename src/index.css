@@ -192,15 +192,6 @@ footer a:hover:after {
   align-items: center;
 }
 
-/* 
-.flex {
-  display: flex;
-}
-
-.column {
-  flex-direction: column;
-} */
-
 .center {
   justify-content: center;
   align-items: center;

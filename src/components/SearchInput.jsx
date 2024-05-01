@@ -12,6 +12,8 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
         <div className={styles.inputField}>
           <input
             type='text'
+            name='name'
+            autoComplete='off'
             value={filters.bedriftName}
             placeholder='Bedriftsnavn'
             onChange={(e) => updateFilters({ bedriftName: e.target.value })}
@@ -24,6 +26,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
         <div className={styles.inputField}>
           <input
             type='text'
+            name='number'
             value={filters.organisasjonsnummer}
             placeholder='Organisasjonsnummer'
             onChange={(e) =>
@@ -44,6 +47,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
             fra{' '}
             <input
               type='text'
+              name='fromDate'
               value={filters.fraRegistreringsdato}
               placeholder='yyyy-mm-dd'
               onChange={(e) =>
@@ -55,6 +59,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
             til{' '}
             <input
               type='text'
+              name='toDate'
               value={filters.tilRegistreringsdato}
               placeholder='yyyy-mm-dd'
               onChange={(e) =>
