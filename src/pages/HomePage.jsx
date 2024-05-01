@@ -101,17 +101,6 @@ export function HomePage() {
         break
     }
   }
-  //   function prevPage() {
-  //     if (page > 0) {
-  //       setPage((prevState) => prevState - 1)
-  //       setUrl(URL_Bedrifter_API + `?page=${page - 1}` + urlQuery)
-  //     }
-  //   }
-  //
-  //   function nextPage() {
-  //     setPage((prevState) => prevState + 1)
-  //     setUrl(URL_Bedrifter_API + `?page=${page + 1}` + urlQuery)
-  //   }
   function resetFilters() {
     setFilters(() => {
       for (const field in filters) {
@@ -164,8 +153,16 @@ export function HomePage() {
             {data._embedded && data._embedded.enheter.length > 0 ? (
               <>
                 <section id='search-result'>
-                  <div>Funnet bedrifter: {data.page.totalElements}</div>
-                  <div>Total antall sider: {data.page.totalPages}</div>
+                  <div className={styles.searchInfo}>
+                    <div>Funnet bedrifter: {data.page.totalElements}</div>
+                    {data.page.totalElements > 10000 && (
+                      <div>Hentet fra registeret 10000 bedrifter </div>
+                    )}
+                  </div>
+                  <div className={styles.searchInfo}>
+                    <div>Total antall sider: {data.page.totalPages}</div>
+                    {data.page.totalPages > 500 && <div>Hentet 500 sider</div>}
+                  </div>
                 </section>
                 <section id='bedrift-list'>
                   <ul>
