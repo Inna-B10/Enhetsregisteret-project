@@ -130,7 +130,7 @@ export function HomePage() {
           'Kunne ikke hente bedrifter data'
         ) : data ? (
           <>
-            <section id='search-input' className='flex column'>
+            <section id='search-input'>
               <SearchInput
                 handleSearch={handleSearch}
                 filters={filters}
@@ -156,7 +156,7 @@ export function HomePage() {
                     })}
                   </ul>
                 </section>
-                <section id='pagination' className='flex center'>
+                <section id='pagination'>
                   <Pagination
                     page={page}
                     lastPage={lastPage}

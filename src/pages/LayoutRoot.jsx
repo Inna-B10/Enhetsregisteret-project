@@ -9,7 +9,7 @@ export function LayoutRoot() {
   return (
     <>
       <header>
-        <nav className='flex'>
+        <nav>
           <svg
             onClick={() => toggleMenu()}
             className='ham hamRotate hidden-invert'
@@ -48,7 +48,7 @@ export function LayoutRoot() {
           <h1>Enhetsregisteret prosjekt</h1>
         </div>
       </header>
-      <main className='flex column'>
+      <main>
         <Outlet />
       </main>
 

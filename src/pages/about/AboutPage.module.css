@@ -4,7 +4,6 @@
 
 .article {
   margin: 0 2vw;
-  text-wrap: pretty;
 }
 
 ul.list {
@@ -14,7 +13,6 @@ ul.list {
 
 .paragraf {
   margin-top: 5vh;
-  width: 100%;
 }
 
 .marBot {
