@@ -1,0 +1,19 @@
+.detailsButton {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 15px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #5A362F;
+  border-radius: 10px;
+  border: 2px solid #5A362F;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  box-shadow: 1px 1px 4px 0px #666666;
+}
+
+.detailsButton:hover {
+  color: #5A362F;
+  background-color: #C4AD64;
+}

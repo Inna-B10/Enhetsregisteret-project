@@ -1,13 +1,29 @@
-function Pagination({ page, lastPage, prevPage, nextPage }) {
+import styles from './Pagination.module.css'
+
+function Pagination({ page, lastPage, goToPage }) {
   return (
     <>
-      <button disabled={page === 0} onClick={prevPage}>
-        Prev
-      </button>
+      {page !== 0 && (
+        <button className={styles.pageButton} onClick={goToPage} name='first'>
+          {'<<'}
+        </button>
+      )}
+      {page !== 0 && (
+        <button className={styles.pageButton} onClick={goToPage} name='prev'>
+          {'<'}
+        </button>
+      )}
       <p className='bold'>{page + 1}</p>
-      <button disabled={page + 1 === lastPage} onClick={nextPage}>
-        Next
-      </button>
+      {page + 1 !== lastPage && (
+        <button className={styles.pageButton} onClick={goToPage} name='next'>
+          {'>'}
+        </button>
+      )}
+      {page + 1 !== lastPage && (
+        <button className={styles.pageButton} onClick={goToPage} name='last'>
+          {'>>'}
+        </button>
+      )}
     </>
   )
 }

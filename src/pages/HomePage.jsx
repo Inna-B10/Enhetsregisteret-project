@@ -77,21 +77,41 @@ export function HomePage() {
   function handleSearch() {
     setPage(0)
     const searchUrl = URL_Bedrifter_API + `?page=0` + urlQuery
-    console.log(searchUrl)
     fetchData(searchUrl)
   }
-
-  function prevPage() {
-    if (page > 0) {
-      setPage((prevState) => prevState - 1)
-      setUrl(URL_Bedrifter_API + `?page=${page - 1}` + urlQuery)
+  function goToPage(str) {
+    switch (str.target.name) {
+      case 'prev':
+        if (page > 0) {
+          setPage((prevState) => prevState - 1)
+          setUrl(URL_Bedrifter_API + `?page=${page - 1}` + urlQuery)
+        }
+        break
+      case 'next':
+        setPage((prevState) => prevState + 1)
+        setUrl(URL_Bedrifter_API + `?page=${page + 1}` + urlQuery)
+        break
+      case 'first':
+        setPage(() => 0)
+        setUrl(URL_Bedrifter_API + `?page=0` + urlQuery)
+        break
+      case 'last':
+        setPage(() => lastPage - 1)
+        setUrl(URL_Bedrifter_API + `?page=${lastPage - 1}` + urlQuery)
+        break
     }
   }
-
-  function nextPage() {
-    setPage((prevState) => prevState + 1)
-    setUrl(URL_Bedrifter_API + `?page=${page + 1}` + urlQuery)
-  }
+  //   function prevPage() {
+  //     if (page > 0) {
+  //       setPage((prevState) => prevState - 1)
+  //       setUrl(URL_Bedrifter_API + `?page=${page - 1}` + urlQuery)
+  //     }
+  //   }
+  //
+  //   function nextPage() {
+  //     setPage((prevState) => prevState + 1)
+  //     setUrl(URL_Bedrifter_API + `?page=${page + 1}` + urlQuery)
+  //   }
   function resetFilters() {
     setFilters(() => {
       for (const field in filters) {
@@ -112,15 +132,18 @@ export function HomePage() {
     })
   }
   useEffect(() => {
-    console.log(filters)
+    // console.log(filters)
   }, [filters])
 
   useEffect(() => {
     if (data && data.page && data.page.totalPages) {
-      setLastPage(data.page.totalPages)
+      if (data.page.totalPages >= 500) {
+        setLastPage(500)
+      } else {
+        setLastPage(data.page.totalPages)
+      }
     }
   }, [data])
-
   return (
     <>
       <div>
@@ -160,8 +183,7 @@ export function HomePage() {
                   <Pagination
                     page={page}
                     lastPage={lastPage}
-                    prevPage={prevPage}
-                    nextPage={nextPage}
+                    goToPage={goToPage}
                   />
                 </section>
               </>

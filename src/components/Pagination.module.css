@@ -1,0 +1,15 @@
+.pageButton {
+  font-family: inherit;
+  font-weight: 600;
+  margin: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #7D4C41;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.pageButton:hover {
+  color: #5A362F;
+  background-color: #C4AD64;
+}
