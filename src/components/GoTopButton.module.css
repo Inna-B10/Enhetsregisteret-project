@@ -1,0 +1,27 @@
+.goTopHidden {
+  display: none;
+}
+
+.goTop {
+  opacity: 0.7;
+  display: block;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  cursor: pointer;
+  width: 7%;
+
+  &:hover {
+    opacity: 1;
+    border-radius: 60px;
+    outline: 1px solid #5A362F;
+    outline-offset: 2px;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .goTop {
+    width: calc(1vw + 2vw);
+  }
+}

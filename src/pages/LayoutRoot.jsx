@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import GithubLogo from '../assets/github.svg'
 import JobloopLogo from '../assets/jobloop-logo-color.png'
+import { GoTopButton } from '../components/GoTopButton'
 export function LayoutRoot() {
   function toggleMenu() {
     document.querySelector('.nav-bar').classList.toggle('hidden')
@@ -49,6 +50,7 @@ export function LayoutRoot() {
         </div>
       </header>
       <main>
+        <GoTopButton />
         <Outlet />
       </main>
 
