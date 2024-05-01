@@ -53,33 +53,37 @@ export function LayoutRoot() {
       </main>
 
       <footer>
-        <p>
-          <img
-            className='jobloop'
-            src={JobloopLogo}
-            alt='Jobloop - matchmaking i arbeidslivet skaper muligheter for mange!'
-            width={60}
-          />{' '}
-          <a
-            href='https://jobloop.no/kodehode-modellen'
-            target='_blank'
-            title='JobLoop - Kodehode'>
-            Kodehode
-          </a>
-          <div className='vr'></div>
-          <img
-            className='github'
-            src={GithubLogo}
-            alt='Project on GitHub'
-            width={25}
-          />
-          <a
-            href='https://github.com/Inna-B10/Enhetsregisteret-project'
-            target='_blank'
-            title='React project - Enhetsregisteret'>
-            Module D - React project
-          </a>
-        </p>
+        <div className='footer'>
+          <div>
+            <img
+              className='jobloop'
+              src={JobloopLogo}
+              alt='Jobloop - matchmaking i arbeidslivet skaper muligheter for mange!'
+              width={60}
+            />{' '}
+            <a
+              href='https://jobloop.no/kodehode-modellen'
+              target='_blank'
+              title='JobLoop - Kodehode'>
+              Kodehode
+            </a>
+          </div>
+          <div className='vr'>&nbsp;</div>
+          <div>
+            <img
+              className='github'
+              src={GithubLogo}
+              alt='Project on GitHub'
+              width={25}
+            />
+            <a
+              href='https://github.com/Inna-B10/Enhetsregisteret-project'
+              target='_blank'
+              title='React project - Enhetsregisteret'>
+              Module D - React project
+            </a>
+          </div>
+        </div>
       </footer>
     </>
   )

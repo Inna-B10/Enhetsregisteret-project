@@ -1,6 +1,6 @@
 import { GetKommuner } from './GetKommuner'
 import { SaveSearch } from './SaveSearch'
-import styles from './SearchImput.module.css'
+import styles from './SearchInput.module.css'
 import { SearchRadioComp } from './SearchRadioComp'
 
 function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
@@ -9,7 +9,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
       {/* ------------------------------ Bedriftsnavn */}
       <div className={styles.breakPoint}>
         <div>Bedriftsnavn: </div>
-        <div>
+        <div className={styles.inputField}>
           <input
             type='text'
             value={filters.bedriftName}
@@ -21,7 +21,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
       {/* --------------------------- Organisasjonsnummer */}
       <div className={styles.breakPoint}>
         <div>Organisasjonsnummer: </div>
-        <div>
+        <div className={styles.inputField}>
           <input
             type='text'
             value={filters.organisasjonsnummer}
@@ -39,34 +39,35 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
       {/* ---------------------------- Registreringsdato */}
       <div className={styles.breakPoint}>
         <div>Registreringsdato: </div>
-        <div className={styles.fra}>
-          fra{' '}
-          <input
-            type='text'
-            className={styles.inputDate}
-            value={filters.fraRegistreringsdato}
-            placeholder='yyyy-mm-dd'
-            onChange={(e) =>
-              updateFilters({ fraRegistreringsdato: e.target.value })
-            }
-          />
-        </div>
-        <div className={styles.til}>
-          til{' '}
-          <input
-            type='text'
-            className={styles.inputDate}
-            value={filters.tilRegistreringsdato}
-            placeholder='yyyy-mm-dd'
-            onChange={(e) =>
-              updateFilters({ tilRegistreringsdato: e.target.value })
-            }
-          />
+        <div className={styles.inputFieldData}>
+          <div className={styles.fra}>
+            fra{' '}
+            <input
+              type='text'
+              value={filters.fraRegistreringsdato}
+              placeholder='yyyy-mm-dd'
+              onChange={(e) =>
+                updateFilters({ fraRegistreringsdato: e.target.value })
+              }
+            />
+          </div>
+          <div className={styles.til}>
+            til{' '}
+            <input
+              type='text'
+              value={filters.tilRegistreringsdato}
+              placeholder='yyyy-mm-dd'
+              onChange={(e) =>
+                updateFilters({ tilRegistreringsdato: e.target.value })
+              }
+            />
+          </div>
         </div>
       </div>
       <SearchRadioComp filters={filters} updateFilters={updateFilters} />
       <div>
         <button
+          className={styles.searchButton}
           onClick={() => {
             {
               handleSearch(filters)
@@ -75,7 +76,9 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           }}>
           Søk
         </button>
-        <button onClick={() => resetFilters()}>Nullstill</button>
+        <button className={styles.searchButton} onClick={() => resetFilters()}>
+          Nullstill
+        </button>
       </div>
     </>
   )

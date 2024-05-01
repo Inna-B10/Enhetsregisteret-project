@@ -4,6 +4,7 @@ export function SearchRadioComp({ filters, updateFilters }) {
     'konkurs',
     'underTvangsavviklingEllerTvangsopplosning',
     'underAvvikling',
+    /*[TODO]*/
     // 'registrertIMvaregisteret',
     // 'registrertIForetaksregisteret',
     // 'registrertIStiftelsesregisteret',

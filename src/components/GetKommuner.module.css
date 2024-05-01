@@ -1,12 +1,30 @@
+.title {
+  text-wrap: nowrap;
+}
+
 @media screen and (min-width: 768px) {
 
-  .input,
-  .select {
+  .code,
+  .navn {
     margin-left: 5px;
-    width: 95%;
   }
 
-  .select {
-    margin-right: 10px;
+  .inputFieldList {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .code {
+    width: 80px;
+  }
+
+  .rowCol {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navn {
+    width: 90%;
   }
 }

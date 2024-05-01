@@ -1,3 +1,12 @@
+.h2 {
+  margin: 1rem 0 -15px;
+}
+
+.article {
+  margin: 0 2vw;
+  text-wrap: pretty;
+}
+
 ul.list {
   list-style-type: unset;
   margin-top: 2vh;

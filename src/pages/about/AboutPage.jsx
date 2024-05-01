@@ -1,9 +1,9 @@
-// import styles from '../HomePage.module.css'
 import styles from './AboutPage.module.css'
+
 export function AboutPage() {
   return (
-    <>
-      <h2>Om prosjektet</h2>
+    <article className={styles.article}>
+      <h2 className={styles.h2}>Om prosjektet</h2>
       <div className={styles.paragraf}>
         <h3>
           Kjernen i oppgaven går ut på å lage et brukergrensesnitt som lister
@@ -12,8 +12,8 @@ export function AboutPage() {
         </h3>
         <ul className={styles.list}>
           <li>
-            Brukeren velger en kommune fra en nedtrekksliste over alle
-            kommunenavn i Norge.
+            Brukeren velger en kommune fra en nedtrekksliste over alle kommuner
+            i Norge.
           </li>
           <li>Brukeren velger/angir årstall</li>
           <li>Brukeren trykker på "Finn bedrifter"</li>
@@ -86,6 +86,6 @@ export function AboutPage() {
         </div>
         <br />
       </div>
-    </>
+    </article>
   )
 }

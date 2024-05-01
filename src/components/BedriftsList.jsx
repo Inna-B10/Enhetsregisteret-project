@@ -15,7 +15,7 @@ export function BedriftsList({ enhet }) {
 
   return (
     <article>
-      <h2>
+      <h2 className={styles.h2}>
         {enhet.name} {konkursImage}
       </h2>
       <ul>

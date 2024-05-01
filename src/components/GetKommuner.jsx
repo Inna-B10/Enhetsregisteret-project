@@ -36,36 +36,40 @@ function KommunerList({ list, filters, updateFilter }) {
   return (
     <>
       <div className={styles.title}>Kommune navn: </div>
-      <div>
-        <select
-          className={styles.select}
-          value={filters.selectedKommune}
-          onChange={(e) => {
-            updateFilter({
-              kommuneCode: e.target.selectedOptions[0].attributes.code.value,
-              kommuneName: e.target.value,
-              selectedKommune: e.target.value,
-            })
-          }}>
-          <option code={''}></option>
-          {list.map((kommune) => {
-            return (
-              <option key={kommune.code} code={kommune.code}>
-                {kommune.name}
-              </option>
-            )
-          })}
-        </select>
-      </div>
-      <div>Kommune nummer: </div>
-      <div>
-        <input
-          className={styles.input}
-          type='text'
-          value={filters.kommuneCode}
-          placeholder='####'
-          onChange={(e) => updateFilter({ kommuneCode: e.target.value })}
-        />
+      <div className={styles.inputFieldList}>
+        <div>
+          <select
+            className={styles.navn}
+            value={filters.selectedKommune}
+            onChange={(e) => {
+              updateFilter({
+                kommuneCode: e.target.selectedOptions[0].attributes.code.value,
+                kommuneName: e.target.value,
+                selectedKommune: e.target.value,
+              })
+            }}>
+            <option code={''}></option>
+            {list.map((kommune) => {
+              return (
+                <option key={kommune.code} code={kommune.code}>
+                  {kommune.name}
+                </option>
+              )
+            })}
+          </select>
+        </div>
+        <div className={styles.rowCol}>
+          <div className={styles.title}>Kommune nummer: </div>
+          <div>
+            <input
+              className={styles.code}
+              type='text'
+              value={filters.kommuneCode}
+              placeholder='####'
+              onChange={(e) => updateFilter({ kommuneCode: e.target.value })}
+            />
+          </div>
+        </div>
       </div>
     </>
   )
