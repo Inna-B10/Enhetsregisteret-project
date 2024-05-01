@@ -2,8 +2,8 @@
 import styles from './AboutPage.module.css'
 export function AboutPage() {
   return (
-    <main>
-      <h2>About prosjekt</h2>
+    <>
+      <h2>Om prosjektet</h2>
       <div className={styles.paragraf}>
         <h3>
           Kjernen i oppgaven går ut på å lage et brukergrensesnitt som lister
@@ -69,10 +69,13 @@ export function AboutPage() {
         <h3 className={styles.marBot}>API-er</h3>
         <div className={styles.marBot}>
           Brønnøysundregistrene Bruk /enheter - endepunktet for å søke etter
-          enheter. https://data.brreg.no/enhetsregisteret/api/docs/index.html
+          enheter.
+          <br />
+          https://data.brreg.no/enhetsregisteret/api/docs/index.html
         </div>
         <div className={styles.marBot}>
-          Kommuneoppslag SSB https://data.ssb.no/api/klass/v1/versions/1847.json
+          Kommuneoppslag SSB <br />
+          https://data.ssb.no/api/klass/v1/versions/1847.json
           <br />
           Kommuneobjektene ligger under "classificationItems"
         </div>
@@ -83,6 +86,6 @@ export function AboutPage() {
         </div>
         <br />
       </div>
-    </main>
+    </>
   )
 }
