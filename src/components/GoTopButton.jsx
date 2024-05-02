@@ -10,9 +10,7 @@ export function GoTopButton() {
   }
 
   const handleScrollUp = () => {
-    document
-      .getElementById('search-input')
-      .scrollIntoView({ behavior: 'smooth' })
+    document.querySelector('main').scrollIntoView({ behavior: 'smooth' })
   }
 
   useEffect(() => {

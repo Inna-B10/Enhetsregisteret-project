@@ -79,12 +79,10 @@ export function AboutPage() {
           <br />
           Kommuneobjektene ligger under "classificationItems"
         </div>
+        <h4>Visse begrensninger</h4>
         <div className={styles.marBot}>
-          Løsningsforslag/eksempel for url:
-          <br />
-          https://data.brreg.no/enhetsregisteret/api/enheter?kommunenummer=5061&size=10000&fraStiftelsesdato=2022-01-01&tilStiftelsesdato=2022-12-31
+          (Page+1)*size kan ikke overskride 10 000.
         </div>
-        <br />
       </div>
     </article>
   )
