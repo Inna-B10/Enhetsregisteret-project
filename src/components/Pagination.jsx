@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import styles from './Pagination.module.css'
 
 function Pagination({ page, lastPage, goToPage }) {
+  const [goTo, setGoTo] = useState('')
   return (
     <>
       {page !== 0 && (
@@ -24,6 +26,16 @@ function Pagination({ page, lastPage, goToPage }) {
           {'>>'}
         </button>
       )}
+      <button className={styles.pageButton} onClick={goToPage} name={goTo}>
+        gå til
+      </button>
+      <input
+        className={styles.newPage}
+        type='text'
+        value={goTo}
+        onChange={(e) => setGoTo(e.target.value)}
+      />{' '}
+      side
     </>
   )
 }

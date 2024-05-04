@@ -72,7 +72,7 @@ h2 {
 }
 
 select,
-input:not([type="radio"]) {
+input:not([type="radio"], :not(.newPage)) {
   padding: 2px;
   border-radius: 4px;
   border: 2px solid #E1BB7A;
@@ -170,6 +170,8 @@ footer a:hover:after {
 }
 
 #pagination {
+  font-weight: 800;
+  font-size: 1rem;
   margin: 3rem auto;
   display: flex;
   justify-content: center;

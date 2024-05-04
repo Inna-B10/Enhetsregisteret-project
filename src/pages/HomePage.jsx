@@ -80,10 +80,10 @@ export function HomePage() {
   function handleSearch() {
     setPage(0)
     const searchUrl = URL_Bedrifter_API + `?page=0` + urlQuery
-    console.log(searchUrl)
     fetchData(searchUrl)
   }
   function goToPage(str) {
+    const newPage = Number(str.target.name) - 1
     switch (str.target.name) {
       case 'prev':
         if (page > 0) {
@@ -103,6 +103,9 @@ export function HomePage() {
         setPage(() => lastPage - 1)
         setUrl(URL_Bedrifter_API + `?page=${lastPage - 1}` + urlQuery)
         break
+      default:
+        setPage(() => newPage)
+        setUrl(URL_Bedrifter_API + `?page=${newPage}` + urlQuery)
     }
   }
   function resetFilters() {
