@@ -20,11 +20,8 @@ export function HomePage() {
     konkurs: '',
     underTvangsavviklingEllerTvangsopplosning: '',
     underAvvikling: '',
-    // registrertIMvaregisteret:'',
-    // registrertIForetaksregisteret:'',
-    // registrertIStiftelsesregisteret:'',
-    // registrertIFrivillighetsregisteret:'',
-    // frivilligRegistrertIMvaregisteret:'',
+    sortBy: '',
+    sortDirection: '',
   })
   const navn = filters.bedriftName && `&navn=${filters.bedriftName}`
   const kommune = filters.kommuneCode && `&kommunenummer=${filters.kommuneCode}`
@@ -58,6 +55,11 @@ export function HomePage() {
       : filters.underAvvikling === 'underAvviklingYes'
       ? '&underAvvikling=true'
       : '&underAvvikling=false'
+  const sortBy =
+    filters.sortBy &&
+    (filters.sortDirection
+      ? `&sort=${filters.sortBy},${filters.sortDirection}`
+      : `&sort=${filters.sortBy},ASC`)
 
   const [page, setPage] = useState(0)
   const [lastPage, setLastPage] = useState(0)
@@ -72,11 +74,13 @@ export function HomePage() {
     tilRegistreringsdato +
     konkurs +
     underTvangsavvikling +
-    underAvvikling
+    underAvvikling +
+    sortBy
 
   function handleSearch() {
     setPage(0)
     const searchUrl = URL_Bedrifter_API + `?page=0` + urlQuery
+    console.log(searchUrl)
     fetchData(searchUrl)
   }
   function goToPage(str) {
@@ -121,7 +125,7 @@ export function HomePage() {
     })
   }
   useEffect(() => {
-    // console.log(filters)
+    console.log(filters)
   }, [filters])
 
   useEffect(() => {

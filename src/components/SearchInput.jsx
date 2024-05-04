@@ -2,6 +2,7 @@ import { GetKommuner } from './GetKommuner'
 import { SaveSearch } from './SaveSearch'
 import styles from './SearchInput.module.css'
 import { SearchRadioComp } from './SearchRadioComp'
+import { SortSearch } from './SortSearch'
 
 function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
   return (
@@ -27,6 +28,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           <input
             type='text'
             name='number'
+            autoComplete='off'
             value={filters.organisasjonsnummer}
             placeholder='Organisasjonsnummer'
             onChange={(e) =>
@@ -48,6 +50,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
             <input
               type='text'
               name='fromDate'
+              autoComplete='off'
               value={filters.fraRegistreringsdato}
               placeholder='yyyy-mm-dd'
               onChange={(e) =>
@@ -60,6 +63,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
             <input
               type='text'
               name='toDate'
+              autoComplete='off'
               value={filters.tilRegistreringsdato}
               placeholder='yyyy-mm-dd'
               onChange={(e) =>
@@ -70,6 +74,7 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
         </div>
       </div>
       <SearchRadioComp filters={filters} updateFilters={updateFilters} />
+      <SortSearch filters={filters} updateFilters={updateFilters} />
       <div>
         <button
           className={styles.searchButton}

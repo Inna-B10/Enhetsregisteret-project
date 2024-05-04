@@ -150,7 +150,7 @@ footer a:hover:after {
 }
 
 #search-input {
-  align-items: center;
+  /* align-items: center; */
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -158,6 +158,10 @@ footer a:hover:after {
 
 #search-input > div {
   margin-top: 1vh;
+}
+
+#search-input > div:last-child {
+  text-align: center;
 }
 
 

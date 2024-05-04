@@ -4,12 +4,6 @@ export function SearchRadioComp({ filters, updateFilters }) {
     'konkurs',
     'underTvangsavviklingEllerTvangsopplosning',
     'underAvvikling',
-    /*[TODO]*/
-    // 'registrertIMvaregisteret',
-    // 'registrertIForetaksregisteret',
-    // 'registrertIStiftelsesregisteret',
-    // 'registrertIFrivillighetsregisteret',
-    // 'frivilligRegistrertIMvaregisteret',
   ]
   function upperCase(str) {
     const s1 = str

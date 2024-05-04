@@ -8,7 +8,6 @@
   .breakPoint,
   .inputField input {
     width: 100%;
-    align-items: flex-end;
   }
 
   .breakPoint input {
