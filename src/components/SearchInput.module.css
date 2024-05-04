@@ -1,37 +1,3 @@
-@media screen and (min-width: 768px) {
-
-  .inputFieldData,
-  .inputField {
-    width: 75%;
-  }
-
-  .breakPoint,
-  .inputField input {
-    width: 100%;
-  }
-
-  .breakPoint input {
-    margin-left: 5px;
-  }
-
-  .inputFieldData,
-  .inputField,
-  .breakPoint,
-  .fra,
-  .til {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  .fra input,
-  .til input {
-    width: 200px;
-    margin-top: -2px;
-  }
-
-}
-
 .searchButton {
   width: 100px;
   font-size: inherit;
@@ -53,15 +19,6 @@
   background-color: #C4AD64;
 }
 
-@media screen and (min-width: 900px) {
-  .inputFieldData {
-    justify-content: start;
-  }
-
-  .til {
-    margin-left: 15px;
-  }
-}
 
 @media screen and (max-width: 767px) {
 
@@ -73,5 +30,46 @@
   select,
   input:not([type="radio"]) {
     width: 90vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .inputFieldData,
+  .inputField {
+    width: 75%;
+  }
+
+  .breakPoint,
+  .inputField input {
+    width: 100%;
+  }
+
+  .breakPoint input {
+    margin-left: 5px;
+  }
+
+  .fra {
+    margin-left: -20px;
+  }
+
+  .inputFieldData,
+  .inputField,
+  .breakPoint,
+  .fra,
+  .til {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .inputFieldData {
+    justify-content: start;
+  }
+
+  .til {
+    margin-left: 15px;
   }
 }

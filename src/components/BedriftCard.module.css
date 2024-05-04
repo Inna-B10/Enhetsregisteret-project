@@ -31,6 +31,17 @@ hr {
 }
 
 
+@media screen and (max-width: 767px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .bedriftDetaljerLeft,
+  .bedriftDetaljerRight {
+    width: 100%
+  }
+}
+
 @media screen and (min-width: 965px),
 (max-width:767px) {
 
@@ -43,16 +54,5 @@ hr {
 
   .breakPoint > div:nth-of-type(2) {
     text-align: right;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .bedriftDetaljerLeft,
-  .bedriftDetaljerRight {
-    width: 100%
   }
 }

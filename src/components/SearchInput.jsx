@@ -37,10 +37,6 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
           />
         </div>
       </div>
-      {/* -------------------------------- Kommuner */}
-      <div className={styles.breakPoint}>
-        <GetKommuner filters={filters} updateFilter={updateFilters} />
-      </div>
       {/* ---------------------------- Registreringsdato */}
       <div className={styles.breakPoint}>
         <div>Registreringsdato: </div>
@@ -72,6 +68,10 @@ function SearchInput({ handleSearch, filters, updateFilters, resetFilters }) {
             />
           </div>
         </div>
+      </div>
+      {/* -------------------------------- Kommuner */}
+      <div className={styles.breakPoint}>
+        <GetKommuner filters={filters} updateFilter={updateFilters} />
       </div>
       <SearchRadioComp filters={filters} updateFilters={updateFilters} />
       <SortSearch filters={filters} updateFilters={updateFilters} />
