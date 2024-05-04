@@ -72,7 +72,8 @@ h2 {
 }
 
 select,
-input:not([type="radio"], :not(.newPage)) {
+input:not([type="radio"]),
+input:not(.newPage) {
   padding: 2px;
   border-radius: 4px;
   border: 2px solid #E1BB7A;
