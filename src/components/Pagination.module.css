@@ -2,6 +2,7 @@
   font-family: inherit;
   font-weight: 800;
   font-size: 0.9rem;
+  text-wrap: nowrap;
   margin: 15px;
   padding: 5px 10px;
   border-radius: 10px;
@@ -10,13 +11,17 @@
   transition: border-color 0.25s;
 }
 
-.pageButton:hover {
+.pageButton:disabled {
+  border-color: #c9c9c9;
+}
+
+.pageButton:hover :not(disabled) {
   color: #5A362F;
   background-color: #C4AD64;
 }
 
 .newPage {
-  width: 50px;
+  width: 50px !important;
   padding: 5px 10px;
   margin-right: 15px;
   border: 2px solid #7D4C41;

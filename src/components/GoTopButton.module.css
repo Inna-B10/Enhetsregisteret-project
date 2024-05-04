@@ -22,6 +22,6 @@
 
 @media screen and (min-width: 768px) {
   .goTop {
-    width: calc(1vw + 2vw);
+    width: calc(2vw + 2vw);
   }
 }
