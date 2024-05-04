@@ -8,14 +8,11 @@
   .breakPoint,
   .inputField input {
     width: 100%;
+    align-items: flex-end;
   }
 
   .breakPoint input {
     margin-left: 5px;
-  }
-
-  .breakPoint:nth-of-type(3) > div:nth-of-type(1) {
-    padding-top: 5px;
   }
 
   .inputFieldData,
@@ -25,6 +22,7 @@
   .til {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   .fra input,

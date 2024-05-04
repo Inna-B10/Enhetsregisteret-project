@@ -3,6 +3,10 @@
   border: 1px solid #E1BB7A;
   margin: 10px 0;
   padding: 15px;
+
+  & li:not(:last-child) {
+    padding-left: 10px;
+  }
 }
 
 .bedriftCard:nth-of-type(odd) {

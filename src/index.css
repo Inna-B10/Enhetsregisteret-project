@@ -30,6 +30,7 @@
 }
 
 body {
+  min-width: 370px;
   background-color: #FDFDFD;
 }
 
@@ -159,8 +160,9 @@ footer a:hover:after {
   margin-top: 1vh;
 }
 
+
 #search-result {
-  margin: 20px 0;
+  margin: 20px 30px;
 }
 
 #pagination {
@@ -262,6 +264,12 @@ footer a:hover:after {
     margin: -2vh 5vw 2vh 0;
     padding: 0 16vw 2vh 19vw;
     font-size: calc(1rem + 2vw);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #search-input > div:not(:last-child) {
+    height: 35px;
   }
 }
 
