@@ -1,31 +1,15 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Applikasjonen i React som gjør en spørring mot Brønnøysundregistrene sitt API og presenterer en liste over bedriftene som ble funnet.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Installed
+### Installed
 
 - react-router-dom
 - gh-pages
 
-## DONE
+## Minstekrav til oppgaven:
 
-**velge:**
-
-- årstall
-- kommune
-
-**vise:**
-
-- navn
-- stiftelsesdato
-- organisasjonsnummer
-
-`hvor mange treff + hvis resultatet er tomt`
+List ut alle bedrifter som er opprettet i en gitt kommune i et gitt år
 
 ## videre oppgaver
 
@@ -38,26 +22,26 @@ Currently, two official plugins are available:
 - under Tvangsavvikling Eller Tvangsopplosning
 - underAvvikling
 
-## Delvis DONE
-
-- markere alle konkursbo i lista med background color og ikon
+- markere alle konkursbo i lista
 - lagre brukenes tidligere søkekriteriene i local storage
+- sortere resultat
+- vise hvor mange treff
+- vise hvis resultatet er tomt
 
-### sortere resultat:
+**sorteing:**
 
 - navn
 - organisasjonsnummer
 - antallAnsatte
 - registreringsdatoEnhetsregisteret
 
-stiftelsesdato 1277-09-13-----2024
-registreringsdatoEnhetsregisteret 1995-02-19-----2024
-
 sort={feltnavn},{ASC/DESC}
-
 `https://data.brreg.no/enhetsregisteret/api/enheter?sort=antallAnsatte,DESC`
 
 ## [TODO]
+
+noe data kommer som array og må parses
+for eks. firma:INNSIKT
 
 ```
 //forretningsadresse - adresse:
@@ -93,4 +77,4 @@ sort={feltnavn},{ASC/DESC}
 - forretningsadresse.landkode
 - postadresse.landkode
 
-`https://data.brreg.no/enhetsregisteret/api/enheter?navn=Sesam&fraRegistreringsdatoEnhetsregisteret=2017-10-20&tilRegistreringsdatoEnhetsregisteret=2017-10-20&konkurs=false`
+**vise brukenes tidligere søkekriteriene**
