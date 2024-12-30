@@ -1,9 +1,8 @@
-# React + Vite
-
+# Project name: Enhetsregisteret
+### Goal: 
 Applikasjonen i React som gjør en spørring mot Brønnøysundregistrene sitt API og presenterer en liste over bedriftene som ble funnet.
 
-### Installed
-
+#### Installed
 - react-router-dom
 - gh-pages
 
@@ -11,9 +10,9 @@ Applikasjonen i React som gjør en spørring mot Brønnøysundregistrene sitt AP
 
 List ut alle bedrifter som er opprettet i en gitt kommune i et gitt år
 
-## videre oppgaver
+### videre oppgaver:
 
-**velge/skrive:**
+velge eller skrive:
 
 - navn
 - organisasjonsnummer
